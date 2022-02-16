@@ -1,5 +1,9 @@
 package com.example.sistemafinanceiro.entities;
 
+
+import javax.persistence.Table;
+
+@Table(name = "conta")
 public class Conta {
 	private int id;
 	private int numero;

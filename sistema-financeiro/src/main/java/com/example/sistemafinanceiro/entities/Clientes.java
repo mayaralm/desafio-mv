@@ -1,5 +1,8 @@
 package com.example.sistemafinanceiro.entities;
 
+import javax.persistence.Table;
+
+@Table(name = "clientes")
 public class Clientes {
 	private int id;
 	private String nome;
