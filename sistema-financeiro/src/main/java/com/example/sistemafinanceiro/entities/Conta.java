@@ -1,6 +1,7 @@
 package com.example.sistemafinanceiro.entities;
 
 public class Conta {
+	private int id;
 	private int numero;
 	private String cpf;
 	private String cnpj;
@@ -8,8 +9,9 @@ public class Conta {
 	private String tipo;
 	
 
-	public Conta(int numero, String cpf, String cnpj, double saldo, String tipo) {
+	public Conta(int id,int numero, String cpf, String cnpj, double saldo, String tipo) {
 		super();
+		this.id = id;
 		this.numero = numero;
 		this.cpf = cpf;
 		this.cnpj = cnpj;
@@ -17,6 +19,10 @@ public class Conta {
 		this.tipo = tipo;
 	}
 
+
+	public int getId() {
+		return id;
+	}
 
 	public int getNumero() {
 		return numero;

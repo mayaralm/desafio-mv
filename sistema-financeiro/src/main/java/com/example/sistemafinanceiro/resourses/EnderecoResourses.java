@@ -12,7 +12,7 @@ import com.example.sistemafinanceiro.entities.Endereco;
 public class EnderecoResourses {
 	@GetMapping
 	public ResponseEntity<Endereco> findAll(){
-		Endereco x = new Endereco("rua Maria Emilia", "2017","casa a" ,"593790", "nobre", "camaragibe", "Pe");
+		Endereco x = new Endereco(1,"rua Maria Emilia", "2017","casa a" ,"593790", "nobre", "camaragibe", "Pe");
 		return ResponseEntity.ok().body(x);
 		
 	}
