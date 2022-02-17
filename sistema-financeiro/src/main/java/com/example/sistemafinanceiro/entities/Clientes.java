@@ -1,10 +1,17 @@
 package com.example.sistemafinanceiro.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Entity
 @Table(name = "clientes")
 public class Clientes {
-	private int id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 	private String nome;
 	private String endereco;
 	private String email;
@@ -14,7 +21,9 @@ public class Clientes {
 	private String cnpj;
 	
 
-	public Clientes(int id, String nome, String endereco, String email, String telefone, int conta, String cpf,
+	public Clientes() {}
+	
+	public Clientes(long id, String nome, String endereco, String email, String telefone, int conta, String cpf,
 			String cnpj) {
 		super();
 		this.id = id;
@@ -28,7 +37,7 @@ public class Clientes {
 		
 	}
 
-	public Clientes(int id, String nome, String endereco, String email, String telefone, int conta, String cpf) {
+	public Clientes(long id, String nome, String endereco, String email, String telefone, int conta, String cpf) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -41,7 +50,7 @@ public class Clientes {
 	}
 
 	
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
