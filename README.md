@@ -22,16 +22,40 @@ Dependencias utilizadas:
 
 `http://localhost:8080` <br>
 
-Rotas: <br>
+Endpoints: <br>
  - Endereços<br>
 ```
 [GET] 
     /enderecos
     /enderecos/id 
 [POST]
-    /enderecos/new
+    rota:
+        /enderecos/new
+    body:
+    {
+        "rua": "Rua abc",
+        "numero": "17",
+        "complemento": "",
+        "cep": 12345678,
+        "bairro": "Ouro Preto",
+        "cidade": "Olinda",
+        "estado": "PE"  
+    }
 [PUT]
-    /enderecos/edit/id
+    rota: 
+        /enderecos/edit/id
+
+    body:
+    {
+        "rua": "canela",
+        "numero": "17",
+        "complemento": "",
+        "cep": 123456789,
+        "bairro": "Ouro Preto",
+        "cidade": "Olinda",
+        "estado": "PE"  
+    }
+    
 [DELETE]
     /enderecos/delete/id`
 ```
@@ -42,9 +66,29 @@ Rotas: <br>
     /clientes
     /clientes/id 
 [POST]
-    /clientes/new
+     rota:
+        /clientes/new
+    body:
+    {        
+        "nome": "Test",
+        "endereco": "Rua A",
+        "email": "user@teste.com",
+        "telefone": "8179797979",
+        "conta": 123457,
+        "cpf": "01233344455",
+        "cnpj": "123456789000"
+    }
 [PUT]
+    rota: 
     /clientes/edit/id
+
+    body:
+    {
+        "nome": "Test",
+        "endereco": "Rua A",
+        "email": "user@teste.com",
+        "telefone": "8179797979",
+    }
 [DELETE]
     /clientes/delete/id`
 
@@ -55,7 +99,18 @@ Rotas: <br>
     /contas
     /contas/id 
 [POST]
-    /contas/new
+    rota:
+        /contas/new
+    
+    body:
+    {
+        "id": 1,
+        "numero": "12365478",
+        "cpf": "123654789",
+        "cnpj": "11111111",
+        "saldo": 50.1,
+        "tipo": "pessoa fisica"
+    }
 [PUT]
     /contas/edit/id
 [DELETE]
